@@ -1,12 +1,12 @@
 <!DOCTYPE html><html></head>
-   <title>Generos</title>
+   <title>Artistas</title>
    <link rel="stylesheet" type="text/ccs"
       href="{{ url_for('static', filename='style.ccs')}}">
  <head><body>
-    <h1>Generos</h1>
+    <h1>Artistas</h1>
     </ul>
-        {% for g in generos %}
-        <li>{{ g['name'] }}</li>
+        {% for a in artistas %}
+            <li>{{ a['Name'] }}</li>
         {% endfor %}
     </ul>     
 </body><html>       
