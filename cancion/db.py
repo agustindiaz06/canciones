@@ -6,7 +6,7 @@ from flask import current_app, g
 db_folder = current_app.instance_path
 db_name = 'Musica.sqlite'
 db_file = os.path.join(db_folder, db_name)
-db_sql_file = 'datos.sql'
+db_sql_file = 'schema.sql'
 def get_db(): #conectarse a la base de datos
     if 'db' not in g:
         g.db = sqlite3.connect(
