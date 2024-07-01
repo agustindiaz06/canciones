@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from . import db
-bp = Blueprint('genero', __name__, '/generos')
+bp = Blueprint('genero', __name__, url_prefix='/generos')
 
 @bp.route('/')
 def generos():
