@@ -1,12 +1,12 @@
-<!DOCTYPE html><html></head>
-   <title>Artistas</title>
-   <link rel="stylesheet" type="text/ccs"
-      href="{{ url_for('static', filename='style.ccs')}}">
- <head><body>
-    <h1>Artistas</h1>
-    </ul>
-        {% for a in artistas %}
-            <li>{{ a['Name'] }}</li>
-        {% endfor %}
-    </ul>     
-</body><html>       
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}Posts{% endblock %}</h1>
+{% endblock %} {% block content %}
+<ul>
+  {% for a in artistas %}
+  <li>{{ a['name'] }}</li>
+  {% endfor %}
+</ul>
+
+{% if not loop.last %}
+<hr />
+{% endif %} {% endfor %} {% endblock %}

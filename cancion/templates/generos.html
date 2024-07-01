@@ -1,12 +1,19 @@
-<!DOCTYPE html><html></head>
-   <title>Generos</title>
-   <link rel="stylesheet" type="text/ccs"
-      href="{{ url_for('static', filename='style.ccs')}}">
- <head><body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generos</title>
+    <link
+      rel="stylesheet"
+      type="text/ccs"
+      href="{{ url_for('static', filename='style.ccs')}}"
+    />
+  </head>
+  <body>
     <h1>Generos</h1>
+    <ul>
+      {% for g in generos %}
+      <li>{{ g['name'] }}</li>
+      {% endfor %}
     </ul>
-        {% for g in generos %}
-        <li>{{ g['name'] }}</li>
-        {% endfor %}
-    </ul>     
-</body><html>       
+  </body>
+</html>
